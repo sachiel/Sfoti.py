@@ -11,5 +11,13 @@ class Track(models.Model):
     album = models.ForeignKey(Album)
     artist = models.ForeignKey(Artist)
 
+    def player(self):
+        return """
+        <audio controls>
+            <source src="%s" type="audio/mpeg">
+            Your browser does not support the audio tag.
+        </audio>
+        """ % self.track_file.url
+
     def __unicode__(self):
         return self.title
