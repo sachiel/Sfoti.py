@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Track</title>
+</head>
+<body>
+	<section>
+		<ul>
+			<li>Title: {{track.title}}</li>
+			<li>Order: {{track.order}}</li>
+			<li>Track File: {{track.track_file}}</li>
+			<li>Album: {{track.album}}</li>
+			<li>Artist: {{track.artist}}</li>
+			<ul>
+				<li>Biography: {{track.artist.biography}}</li>
+			</ul>
+		</ul>
+	</section>
+</body>
+</html>
